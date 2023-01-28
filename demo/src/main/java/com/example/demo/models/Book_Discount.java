@@ -1,28 +1,23 @@
 package com.example.demo.models;
 
 public class Book_Discount {
-	private String barCode;
-	private String idDiscount;
-
-	public Book_Discount(String barCode, String idDiscount) {
-		this.barCode = barCode;
-		this.idDiscount = idDiscount;
+	String maKM;
+	String barcode;
+	
+	public Book_Discount(String maKM, String barcode) {
+		this.maKM = maKM;
+		this.barcode = barcode;
 	}
-
-	public String getBarCode() {
-		return barCode;
+	public String getMaKM() {
+		return maKM;
 	}
-
-	public void setBarCode(String BarCode) {
-		this.barCode = BarCode;
+	public void setMaKM(String maKM) {
+		this.maKM = maKM;
 	}
-
-	public String getIdDiscount() {
-		return idDiscount;
+	public String getBarcode() {
+		return barcode;
 	}
-
-	public void setIdDiscount(String idDiscount) {
-		this.idDiscount = idDiscount;
+	public void setBarcode(String barcode) {
+		this.barcode = barcode;
 	}
-
 }
