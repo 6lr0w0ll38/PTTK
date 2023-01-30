@@ -40,7 +40,7 @@ public class BookController {
 	public String book(@PathVariable String barcode,Model model) throws SQLException {
 		BookResponsitory bImpl = new BookResponsitory();
 		model.addAttribute("book" , bImpl.getByBarcode(barcode));
-		return "book/book";		
+		return "book/book";
 	}
 	@RequestMapping("book/edit{barcode}")
 	public String book_edit(@PathVariable String barcode,Model model) throws SQLException {

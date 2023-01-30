@@ -17,6 +17,10 @@
 
             	reader.onload = function (e) {
                 $('#book-img').attr("src", e.target.result);
+                $('#bookImage').attr("value", e.target.result);
+                
+                alert("Converted Base64 version is :" + document.getElementById('bookImage').value);
+
             }
             
             reader.readAsDataURL(input.files[0]);// hàm hệ thống
@@ -548,7 +552,7 @@
 			</div>
 		</div>
 		<div class="body">
-			<form action="/book/create">
+			<form action="/book/create" method="post">
 			<button id="submit" style="display:none">submit</button>
 			<div class="general-info">
 				<div class="block-info-1 title box-shadow">		
@@ -574,8 +578,9 @@
 						<input class="input-general" id="NXB" name="bookNXB"/>
 					</div>
 					<p class="label-color bold-title">Ảnh đầu sách</p>
+					<input id="bookImage" style="display:none" name="bookImage"/>
 					<input id="hidden-input" style="display:none"
-						type="file" accept="image/gif, image/jpeg, image/png" name="bookImage" />
+						type="file" accept="image/gif, image/jpeg, image/png"/>
 					<div class="choose-img" id="choose-img">
 						+
 					</div>
